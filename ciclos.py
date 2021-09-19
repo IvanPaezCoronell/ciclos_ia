@@ -152,3 +152,19 @@ def p_edades(n_alumnos):
 
 
 p_edades(5)
+
+
+# 5. Menor valor
+def n_menor(n_numeros):
+    menor = 999999999999999999
+    for i in range(0, n_numeros):
+        numero = int(input('Digite un numero: '))
+        if (numero == 1):
+            menor = numero
+        else:
+            if (numero < menor):
+                menor = numero
+    print('\nEl numero menor es --> ', menor)
+
+
+n_menor(5)
