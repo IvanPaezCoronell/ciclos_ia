@@ -41,3 +41,69 @@ def transito_baq(n_autos, digito):
 
 
 transito_baq(0, 0)
+
+
+# 2. Porcentaje de animales por edades
+def zoo(animal):
+    acum1 = 0
+    acum2 = 0
+    acum3 = 0
+    acum4 = 0
+    acum5 = 0
+    acum6 = 0
+    acum7 = 0
+    acum8 = 0
+    acum9 = 0
+    if (animal == 'elefantes'):
+        print('\nAnimal a estudiar --> Elefantes')
+        for i in range(0, 20):
+            edad = int(input(f'Animal {i+1} edad: '))
+            if (edad <= 1):
+                acum1 = acum1 + 1
+            elif (edad > 1 and edad < 3):
+                acum2 = acum2 + 1
+            elif (edad >= 3):
+                acum3 = acum3 + 1
+            cat1 = (acum1*100) / 20
+            cat2 = (acum2*100) / 20
+            cat3 = (acum3*100) / 20
+        print(f'\nPorcentaje de  edad  [0 a 1] en elefantes -->  {cat1}%')
+        print(f'Porcentaje de  edad  [2 años ] en elefantes -->  {cat2}%')
+        print(f'Porcentaje de  edad  [3 o mas años] en elefantes -->  {cat3}%')
+
+    elif (animal == 'jirafas'):
+        print('\nAnimal a estudiar --> Jirafas')
+        for i in range(0, 15):
+            edad = int(input(f'Animal {i+1} edad: '))
+            if (edad <= 1):
+                acum4 = acum4 + 1
+            elif (edad > 1 and edad < 3):
+                acum5 = acum5 + 1
+            elif (edad >= 3):
+                acum6 = acum6 + 1
+            cat1 = (acum4*100) / 15
+            cat2 = (acum5*100) / 15
+            cat3 = (acum6*100) / 15
+        print(f'\nPorcentaje de  edad  [0 a 1] en jirafas -->  {cat1}%')
+        print(f'Porcentaje de  edad  [2 años ] en jirafas -->  {cat2}%')
+        print(f'Porcentaje de  edad  [3 o mas años] en jirafas -->  {cat3}%')
+
+    elif (animal == 'chimpances'):
+        print('\nAnimal a estudiar --> Chimpances')
+        for i in range(0, 40):
+            edad = int(input(f'Animal {i+1} edad: '))
+            if (edad <= 1):
+                acum7 = acum7 + 1
+            elif (edad > 1 and edad < 3):
+                acum8 = acum8 + 1
+            elif (edad >= 3):
+                acum9 = acum9 + 1
+            cat1 = (acum7*100) / 40
+            cat2 = (acum8*100) / 40
+            cat3 = (acum9*100) / 40
+        print(f'\nPorcentaje de edad  [0 a 1] en chimpances -->  {cat1}%')
+        print(f'Porcentaje de edad  [2 años ] en chimpances -->  {cat2}%')
+        print(f'Porcentaje de edad  [3 o mas años] en chimpances -->  {cat3}%')
+
+
+zoo('jirafas')
