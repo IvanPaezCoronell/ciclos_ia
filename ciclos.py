@@ -107,3 +107,22 @@ def zoo(animal):
 
 
 zoo('jirafas')
+
+
+# 3. Salario semanal de los obreros en una empresa
+def obreros(n_obreros):
+    for i in range(n_obreros):
+        hora = int(input(f'Digite las horas de trabajo del obrero {i+1} --> '))
+        if (hora <= 40):
+            pago_total = 20 * hora
+            print(f'\nsalario del obrero {i+1}: ${pago_total}')
+        elif (hora > 40):
+            hora_extra = int(input('Digite las horas extras: '))
+            extras = (hora - 40)
+            pago_primeras = (20 * 40)
+            pago_extra = ((hora_extra + extras) * 25)
+            pago_total_extra = pago_extra + pago_primeras
+            print(f'\nsalario con horas extras: ${pago_total_extra}')
+
+
+obreros(4)
