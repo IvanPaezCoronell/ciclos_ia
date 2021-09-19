@@ -126,3 +126,29 @@ def obreros(n_obreros):
 
 
 obreros(4)
+
+
+# 4. Promedio de edades de hombres y mujeres
+def p_edades(n_alumnos):
+    acumh = 0
+    acumm = 0
+    edadh = 0
+    edadm = 0
+    for i in range(0, n_alumnos):
+        genero = input(f'Digite el genero del estudiante {i+1}: --> ')
+        edades = int(input(f'Digite la edad del estudiante {i+1}: --> '))
+        if (genero == 'hombre'):
+            acumh = acumh + 1
+            edadh = edadh + edades
+            promedioh = edadh / acumh
+        elif (genero == 'mujer'):
+            acumm = acumm + 1
+            edadm = edadm + edades
+            promediom = edadm / acumm
+    promedio_grupo = (edadh + edadm) / n_alumnos
+    print('\nPromedio de edades Hombres: ', promedioh)
+    print('Promedio de edades Mujeres: ', promediom)
+    print('Promedio de edades de todo el grupo: ', promedio_grupo)
+
+
+p_edades(5)
