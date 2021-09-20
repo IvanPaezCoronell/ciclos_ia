@@ -168,3 +168,24 @@ def n_menor(n_numeros):
 
 
 n_menor(5)
+
+
+# 6. Club en contra de la obesidad
+def club(personas):
+    for i in range(0, 5):
+        acum_peso = 0
+        promedio_peso = 0
+        diferencia = 0
+        ultimo = float(input(f'Ultimo peso de la persona {i+1}: --> '))
+        for x in range(0, 10):
+            peso = float(input(f'Digite el peso de la bascula {x+1}: --> '))
+            acum_peso = acum_peso + peso
+        promedio_peso = acum_peso / 10
+        diferencia = promedio_peso - ultimo
+        if (diferencia > 0):
+            print(f'La persona {i+1} subio de peso', diferencia, 'kilos')
+        else:
+            print(f'La persona {i+1} bajo de peso', diferencia, 'kilos')
+
+
+club(5)
