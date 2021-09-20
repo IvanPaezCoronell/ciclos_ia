@@ -240,3 +240,27 @@ def teatro(n_clientes):
 
 
 teatro(20)
+
+
+# 9. Comisiones a los vendedores de Kia Autos
+def kia(n_empleados):
+    for i in range(0, n_empleados):
+        valor = float(input(f'Digite el valor vendido del empleado {i+1}: $'))
+        if (valor <= 20000000):
+            comision = valor * 0.1
+            print('Su comision es de: ', comision)
+        elif (valor > 20000000 and valor < 40000000):
+            comision = valor * 0.15
+            print('Su comision es de: ', comision)
+        elif (valor >= 40000000 and valor < 80000000):
+            comision = valor * 0.2
+            print('Su comision es de: ', comision)
+        elif (valor >= 80000000 and valor < 160000000):
+            comision = valor * 0.25
+            print('Su comision es de: ', comision)
+        else:
+            comision = valor * 0.3
+            print('Su comision es de: ', comision)
+
+
+kia(100)
