@@ -189,3 +189,19 @@ def club(personas):
 
 
 club(5)
+
+
+# 7. Compra en un Supermercado
+def supermercado():
+    total = 0
+    seguir = 'no'
+    while (seguir == 'no' or seguir == 'NO'):
+        nombre = input('Digite el nombre del articulo: ')
+        cantidad = int(input(f'Digite la cantidad de {nombre} a comprar: '))
+        precio = float(input(f'Digite el precio del articulo {nombre}: $'))
+        total = total + (precio * cantidad)
+        seguir = input('Desea finalizar su compra? --> ')
+    print('pago total de la compra --> $', total)
+
+
+supermercado()
