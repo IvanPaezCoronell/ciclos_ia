@@ -205,3 +205,38 @@ def supermercado():
 
 
 supermercado()
+
+
+# 8. Descuentos en un Teatro
+def teatro(n_clientes):
+    categoria1 = 0
+    categoria2 = 0
+    categoria3 = 0
+    categoria4 = 0
+    categoria5 = 0
+    precio = float(input('Digite el precio de los asientos --> $'))
+    for i in range(0, n_clientes):
+        edad_c = int(input(f'Digite la edad del cliente {i+1} --> '))
+        if (edad_c >= 5 and edad_c <= 14):
+            descuento_t = precio * 0.35
+            categoria1 = categoria1 + descuento_t
+        elif (edad_c >= 15 and edad_c <= 19):
+            descuento_t = precio * 0.25
+            categoria2 = categoria2 + descuento_t
+        elif (edad_c >= 20 and edad_c <= 45):
+            descuento_t = precio * 0.1
+            categoria3 = categoria3 + descuento_t
+        elif (edad_c >= 46 and edad_c <= 65):
+            descuento_t = precio * 0.25
+            categoria4 = categoria4 + descuento_t
+        elif (edad_c >= 66):
+            descuento_t = precio * 0.35
+            categoria5 = categoria5 + descuento_t
+    print('\nCantidad perdida en la categoria 1: $', categoria1)
+    print('Cantidad perdida en la categoria 2: $', categoria2)
+    print('Cantidad perdida en la categoria 3: $', categoria3)
+    print('Cantidad perdida en la categoria 4: $', categoria4)
+    print('Cantidad perdida en la categoria 5: $', categoria5)
+
+
+teatro(20)
