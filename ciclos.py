@@ -264,3 +264,34 @@ def kia(n_empleados):
 
 
 kia(100)
+
+
+# 10. Empresa Encuestas S.A
+def encuestas_sa(n_votos):
+    candidato1 = 0
+    candidato2 = 0
+    candidato3 = 0
+    for i in range(0, n_votos):
+        voto = int(input(f'Persona {i + 1}, Digite su voto: '))
+        if (voto == 1):
+            candidato1 = candidato1 + 1
+        elif (voto == 2):
+            candidato2 = candidato2 + 1
+        elif (voto == 3):
+            candidato3 = candidato3 + 1
+    print('\nTotal de votos candidato 1 --> ', candidato1)
+    print('Total de votos candidato 2 --> ', candidato2)
+    print('Total de votos candidato 3 --> ', candidato3)
+    if(candidato1 > candidato2 and candidato1 > candidato3):
+        print('\nEl candidato 1 es el ganador')
+    elif(candidato1 < candidato2 and candidato2 > candidato3):
+        print('\nEl candidato 2 es el ganador')
+    elif(candidato1 < candidato3 and candidato2 < candidato3):
+        print('\nEl candidato 3 es el ganador')
+    elif (candidato1 == candidato2 == candidato3):
+        print('\nEmpate entre los 3 candidatos!')
+    else:
+        print('\nNo hay ganador, quedaron empatados por el primer puesto!')
+
+
+encuestas_sa(50000)
